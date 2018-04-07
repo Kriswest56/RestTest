@@ -1,4 +1,4 @@
-package com.kris.resources;
+package com.kris.service;
 
 
 import com.google.gson.JsonObject;
@@ -10,7 +10,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Path("/")
-public class MyResource {
+public class BaseService {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
