@@ -23,10 +23,8 @@ public class BaseService {
     @Path("{name}")
     public String getIt(@PathParam("name") String name){
 
-        String param = name;
-
         JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("Hello", param);
+        jsonObject.addProperty("Hello", name);
 
         return jsonObject.toString();
 
