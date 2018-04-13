@@ -29,20 +29,20 @@ public class BaseServiceImplTest {
     @Test
     public void getMessageStringTest(){
 
-        String resp = baseServiceImpl.getMessage("Kris");
+        String resp = baseServiceImpl.getMessage("Test");
 
         Assert.assertNotNull(resp);
-        Assert.assertEquals("{\"Hello\":\"Kris\"}", resp);
+        Assert.assertEquals("{\"Message\":\"Test\"}", resp);
 
     }
 
     @Test
     public void postMessageTest(){
 
-        String resp = baseServiceImpl.postMessage("{\"Hello\":\"Kris\"}");
+        String resp = baseServiceImpl.postMessage("{\"Message\":\"Test\"}");
 
         Assert.assertNotNull(resp);
-        Assert.assertEquals("{\"Hello\":\"Kris\"}", resp);
+        Assert.assertEquals("{\"Message\":\"Test\"}", resp);
 
     }
 

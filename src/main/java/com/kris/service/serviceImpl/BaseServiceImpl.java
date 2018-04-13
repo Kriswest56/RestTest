@@ -34,7 +34,7 @@ public class BaseServiceImpl implements BaseService {
     public String getMessage(@PathParam("message") String message){
 
         JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("Hello", message);
+        jsonObject.addProperty("Message", message);
 
         return jsonObject.toString();
 
