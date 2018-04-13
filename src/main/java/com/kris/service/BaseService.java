@@ -1,33 +1,9 @@
 package com.kris.service;
 
+public interface BaseService {
 
-import com.google.gson.JsonObject;
-
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
-
-@Path("/")
-public class BaseService {
-
-    @GET
-    @Produces(MediaType.TEXT_PLAIN)
-    public String getIt(){
-        return "Resource Home";
-    }
-
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    @Path("{name}")
-    public String getIt(@PathParam("name") String name){
-
-        JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("Hello", name);
-
-        return jsonObject.toString();
-
-    }
+    String getMessage();
+    String getMessage(String message);
+    String postMessage(String message);
 
 }
